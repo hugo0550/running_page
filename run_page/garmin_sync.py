@@ -21,6 +21,16 @@ import aiofiles
 import cloudscraper
 import garth
 import httpx
+
+# Patch GarminOAuth1Session to send requests via cloudscraper to avoid 429 WAF blocking
+try:
+    _scraper = cloudscraper.create_scraper()
+    _orig_send = garth.sso.GarminOAuth1Session.send
+    def _patched_send(self, request, **kwargs):
+        return _scraper.send(request, **kwargs)
+    garth.sso.GarminOAuth1Session.send = _patched_send
+except Exception as _e:
+    pass
 from config import FOLDER_DICT, JSON_FILE, SQL_FILE
 from garmin_device_adaptor import process_garmin_data
 from utils import make_activities_file
