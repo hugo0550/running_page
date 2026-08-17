@@ -1,5 +1,6 @@
 import argparse
 
+import cloudscraper
 import garth
 
 if __name__ == "__main__":
@@ -15,6 +16,7 @@ if __name__ == "__main__":
     options = parser.parse_args()
     if options.is_cn:
         garth.configure(domain="garmin.cn", ssl_verify=False)
+    garth.client.sess = cloudscraper.create_scraper()
     garth.login(options.email, options.password)
     secret_string = garth.client.dumps()
     print(secret_string)

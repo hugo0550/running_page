@@ -18,6 +18,7 @@ from io import BytesIO
 from lxml import etree
 
 import aiofiles
+import cloudscraper
 import garth
 import httpx
 from config import FOLDER_DICT, JSON_FILE, SQL_FILE
@@ -62,8 +63,19 @@ class Garmin:
             garth.configure(domain="garmin.cn", ssl_verify=False)
         self.modern_url = self.URL_DICT.get("MODERN_URL")
         garth.client.loads(secret_string)
+        garth.client.sess = cloudscraper.create_scraper()
         if garth.client.oauth2_token.expired:
-            garth.client.refresh_oauth2()
+            max_retries = 3
+            for attempt in range(max_retries):
+                try:
+                    garth.client.refresh_oauth2()
+                    break
+                except Exception as e:
+                    if attempt < max_retries - 1:
+                        logger.warning(f"refresh_oauth2 attempt {attempt + 1} failed: {e}, retrying in 5s...")
+                        time.sleep(5)
+                    else:
+                        raise e
 
         self.headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36",
