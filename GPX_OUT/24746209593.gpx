@@ -1,0 +1,83 @@
+<gpx xmlns:ns3="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns2="http://www.garmin.com/xmlschemas/GpxExtensions/v3" creator="Garmin Connect" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/11.xsd">
+  <extensions>
+<distance>10.75</distance>
+<average_hr>101.0</average_hr>
+<average_speed>0.34299999475479126</average_speed>
+<start_time>2026-10-16T15:08:36+00:00</start_time>
+<end_time>2026-10-16T15:09:07.332000+00:00</end_time>
+<moving_time>7.0</moving_time>
+<elapsed_time>67.329</elapsed_time>
+</extensions>
+<metadata>
+    <link href="connect.garmin.com">
+      <text>Garmin Connect</text>
+    </link>
+    <time>2026-10-16T15:08:36.000Z</time>
+  </metadata>
+  <trk>
+    <name>南京市 骑行</name>
+    <type>cycling</type>
+    <trkseg>
+      <trkpt lat="31.92237974144518375396728515625" lon="118.81990201771259307861328125">
+        <ele>7</ele>
+        <time>2026-10-16T15:08:59.000Z</time>
+        <extensions>
+          <ns3:TrackPointExtension>
+            <ns3:atemp>28.0</ns3:atemp>
+            <ns3:hr>105</ns3:hr>
+          </ns3:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="31.92238795571029186248779296875" lon="118.819873519241809844970703125">
+        <ele>7</ele>
+        <time>2026-10-16T15:09:00.000Z</time>
+        <extensions>
+          <ns3:TrackPointExtension>
+            <ns3:atemp>28.0</ns3:atemp>
+            <ns3:hr>104</ns3:hr>
+          </ns3:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="31.92275583744049072265625" lon="118.81975558586418628692626953125">
+        <ele>7.19999980926513671875</ele>
+        <time>2026-10-16T15:09:36.000Z</time>
+        <extensions>
+          <ns3:TrackPointExtension>
+            <ns3:atemp>28.0</ns3:atemp>
+            <ns3:hr>103</ns3:hr>
+          </ns3:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="31.9227831624448299407958984375" lon="118.81973111070692539215087890625">
+        <ele>7.19999980926513671875</ele>
+        <time>2026-10-16T15:09:39.000Z</time>
+        <extensions>
+          <ns3:TrackPointExtension>
+            <ns3:atemp>28.0</ns3:atemp>
+            <ns3:hr>103</ns3:hr>
+          </ns3:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="31.92279045470058917999267578125" lon="118.81971686147153377532958984375">
+        <ele>7.19999980926513671875</ele>
+        <time>2026-10-16T15:09:41.000Z</time>
+        <extensions>
+          <ns3:TrackPointExtension>
+            <ns3:atemp>28.0</ns3:atemp>
+            <ns3:hr>103</ns3:hr>
+          </ns3:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="31.9227893650531768798828125" lon="118.81971250288188457489013671875">
+        <ele>7.19999980926513671875</ele>
+        <time>2026-10-16T15:09:43.000Z</time>
+        <extensions>
+          <ns3:TrackPointExtension>
+            <ns3:atemp>29.0</ns3:atemp>
+            <ns3:hr>102</ns3:hr>
+          </ns3:TrackPointExtension>
+        </extensions>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>
